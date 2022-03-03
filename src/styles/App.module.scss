@@ -1,0 +1,44 @@
+// buttons
+$appMargin: 10px;
+button {
+  margin: 0 $appMargin;
+}
+button:focus-visible {
+  border: 1px solid black;
+}
+
+// page layout
+$headerFooterHeight: 70px;
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Header {
+  @include flexCenter;
+  height: $headerFooterHeight;
+  color: #fff;
+}
+.Content {
+  @include flexCenter;
+  min-height: calc(100vh - calc($headerFooterHeight * 2));
+  background: bisque;
+}
+.Footer {
+  @include flexCenter;
+  height: $headerFooterHeight;
+}
+
+// app content
+.AppContent {
+  @include flexCenter;
+  flex-direction: column;
+}
+.ButtonGroup {
+  @include flexCenter;
+  flex-direction: row;
+  margin: $appMargin 0;
+}
+.Canvas {
+  margin: $appMargin;
+}
