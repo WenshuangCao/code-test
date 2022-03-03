@@ -33,7 +33,7 @@ export const AppContent = () => {
   );
 
   useEffect(() => {
-    const canvas = canvasRef.current as HTMLCanvasElement;
+    const canvas = canvasRef.current as unknown as HTMLCanvasElement;
     const ctx = canvas.getContext('2d');
     const currentStyle = showStyle === 1 ? [...colors] : [...sortedColors];
     for (let row = 0; row < rows; row++) {
